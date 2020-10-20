@@ -1,0 +1,13 @@
+{
+    "name": "grafikart/twig",
+    "authors": [
+        {
+            "name": "Alexandre Caignard",
+            "email": "a.caignard@hotmail.fr"
+        }
+    ],
+    "require": {
+        "twig/twig": "3.0",
+        "michelf/php-markdown": "^1.9"
+    }
+}

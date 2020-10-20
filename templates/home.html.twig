@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+<title>Tutoriels</title>
+{% endblock %}
+
+{% block content %}
+
+<h1>Les derniers tutoriels</h1>
+<div class="row">
+    {% for tutoriel in tutoriels %}
+    <div class="col-xs">
+        <div class="card">
+            <img src="https://www.grafikart.fr/uploads/tutoriels/1/thumb_{{ tutoriel.id }}.jpg" alt=""
+                class="card-img-top" width="100%">
+            <div class="card-block">
+                <h4 class="card-title">{{ 'Tutoriel : ' ~ tutoriel.name }}</h4>
+                <p class="card-text">{{ tutoriel.content | markdown }}</p>
+                <a href="#">Voir le tutoriel</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
